@@ -63,9 +63,15 @@ namespace Palindromes.Tests
       Assert.IsInstanceOfType(result, typeof(bool));
       Assert.IsFalse(result);
     }
+    [TestMethod]
+    public void PalindromeChecker_CompareInputToReverseListIsTrue_Bool()
+    {
+      Phrase testPhrase = new Phrase("hannah");
+      List<char> charList = testPhrase.StringToCharList();
+      List<char> reverseList = testPhrase.ReverseList(charList);
+      bool result = testPhrase.PalindromeChecker(charList, reverseList);
+      Assert.IsInstanceOfType(result, typeof(bool));
+      Assert.IsTrue(result);
+    }
+  }
 }
-}
-
-
-// bool areEqual = CompareLists(result, expected);
-// Assert.IsTrue(areEqual)

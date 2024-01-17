@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-
 namespace Palindromes.Models
 {
   public class Phrase
@@ -15,7 +14,7 @@ namespace Palindromes.Models
     }
   public List<char> StringToCharList()
   {
-    return Input.ToList(); //should split str to char list.
+    return Input.ToList(); 
   }
 
   public List<char> ReverseList(List<char> userInput)
@@ -29,15 +28,7 @@ namespace Palindromes.Models
   }
   public bool PalindromeChecker(List<char> input, List<char> reverse)
   {
-    if (input == reverse)
-    {
-      return true;
-    }
-    else
-    {
-      return false;
-    }
-    
+   return input.SequenceEqual(reverse);
   }
 }
 }
