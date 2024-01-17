@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Palindromes.Models;
+using System.Collections.Generic;
 
 namespace Palindromes.Tests
 {
@@ -22,6 +23,7 @@ namespace Palindromes.Tests
       string result = newPhrase.Input;
       Assert.AreEqual(userInput, result);
     }
+
     [TestMethod]
     public void SetUserInput_SetsValueOfUserInput_Void()
     {
@@ -31,7 +33,28 @@ namespace Palindromes.Tests
       Assert.AreEqual(newInput, newPhrase.Input);
     }
 
+    [TestMethod]
+    public void StringToChar_CreateCharArray_Array()
+    {
+      string testString = "hello";
+      Phrase phrase = new Phrase(testString);
+      char[] newArray = phrase.StringToChar();
+      char[] expected =  { 'h', 'e', 'l', 'l', 'o'};
+      CollectionAssert.AreEqual(newArray, expected);
+    }
+
+
+
+    // [TestMethod]
+    // public void ReversePhrase_ReverseUserInput_String()
+    // {
+    //   Phrase userInput = new Phrase("hello");
+    //   string reversedInput = userInput.ReversePhrase();
+    //   string expected = new Phrase("olleh");
+    //   Assert.AreEqual(reverseInput, expected);
+    // }
     
+
 }
   
 }
