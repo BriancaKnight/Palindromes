@@ -28,6 +28,7 @@ class Program
     else 
     {
       Console.WriteLine(Palindromes.UserInterfaceModels.GoodbyeBanner.Goodbye);
+      Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
     }
 
   }
