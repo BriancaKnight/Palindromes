@@ -32,29 +32,34 @@ namespace Palindromes.Tests
       newPhrase.Input = newInput;
       Assert.AreEqual(newInput, newPhrase.Input);
     }
-
     [TestMethod]
-    public void StringToChar_CreateCharArray_Array()
+    public void StringtoCharList_CreateCharList_List()
     {
       string testString = "hello";
-      Phrase phrase = new Phrase(testString);
-      char[] newArray = phrase.StringToChar();
-      char[] expected =  { 'h', 'e', 'l', 'l', 'o'};
-      CollectionAssert.AreEqual(newArray, expected);
+      Phrase testPhrase = new Phrase(testString);
+      List<char> testList = testPhrase.StringToCharList();
+      List<char> expected = new List<char> { 'h', 'e', 'l', 'l', 'o' };
+      CollectionAssert.AreEqual(testList, expected);
     }
-
-
-
-    // [TestMethod]
-    // public void ReversePhrase_ReverseUserInput_String()
-    // {
-    //   Phrase userInput = new Phrase("hello");
-    //   string reversedInput = userInput.ReversePhrase();
-    //   string expected = new Phrase("olleh");
-    //   Assert.AreEqual(reverseInput, expected);
-    // }
-    
-
 }
-  
 }
+
+  // [TestMethod]
+  //   public void StringToChar_CreateCharArray_Array()
+  //   {
+  //     string testString = "hello";
+  //     Phrase phrase = new Phrase(testString);
+  //     char[] newArray = phrase.StringToChar();
+  //     char[] expected =  { 'h', 'e', 'l', 'l', 'o'};
+  //     CollectionAssert.AreEqual(newArray, expected);
+  //   }
+
+  //   [TestMethod]
+  //   public void ReverseArray_ReverseCharArray_Array()
+  //   {
+  //     Phrase testPhrase = new Phrase("hello");
+  //     char [] testArray = testPhrase.StringToChar();
+  //     char [] result = testPhrase.ReverseArray(testArray);
+  //     char [] expected = {'o', 'l', 'l', 'e', 'h'};
+  //     Assert.AreEqual(result, expected);
+  //   }

@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+
 
 namespace Palindromes.Models
 {
@@ -11,22 +13,25 @@ namespace Palindromes.Models
     {
       Input = userInput;
     }
-  
-  public char[] StringToChar() //removed input b/c class access?
+  public List<char> StringToCharList()
   {
-    return Input.ToCharArray(); //line 11 used prop?
+    return Input.ToList(); //should split str to char list.
   }
   
-  }
+}
 }
 
+// public char[] StringToChar() 
+//   {
+//     return Input.ToCharArray();
+//   }
 
-
- //   )
-//      reversedPhrase = new Phrase();
-//     for (string (userInput.length -1); i <= userInput.length; i--)
+//   public char[] ReverseArray(char[] userInput) // ReverseArray(StringToChar(userInput)) (callf() in UI)
+//   {
+//     char[] reversedPhrase = new char[] { };
+//     for (int i = userInput.Length -1; i >= 0; i--)
 //     {
 //       reversedPhrase.Add(i);
 //     }
 //     return reversedPhrase;
-//   } 
+//   }
