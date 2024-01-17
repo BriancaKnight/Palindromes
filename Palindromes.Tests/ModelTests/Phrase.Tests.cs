@@ -61,6 +61,7 @@ namespace Palindromes.Tests
       List<char> reverseList = testPhrase.ReverseList(charList);
       bool result = testPhrase.PalindromeChecker(charList, reverseList);
       Assert.IsInstanceOfType(result, typeof(bool));
+      Assert.IsFalse(result);
     }
 }
 }
