@@ -32,6 +32,7 @@ namespace Palindromes.Tests
       newPhrase.Input = newInput;
       Assert.AreEqual(newInput, newPhrase.Input);
     }
+    
     [TestMethod]
     public void StringtoCharList_CreateCharList_List()
     {
@@ -51,16 +52,19 @@ namespace Palindromes.Tests
       List<char> expected = new List<char> {'o', 'l', 'l', 'e', 'h'};
       CollectionAssert.AreEqual(result, expected);
     }
+
+    [TestMethod]
+    public void PalindromeChecker_CompareInputToReverseList_Bool()
+    {
+      Phrase testPhrase = new Phrase("hello");
+      List<char> charList = testPhrase.StringToCharList();
+      List<char> reverseList = testPhrase.ReverseList(charList);
+      bool result = testPhrase.PalindromeChecker(charList, reverseList);
+      Assert.IsInstanceOfType(result, typeof(bool));
+    }
 }
 }
 
-  //   [TestMethod]
-  //   public void ReverseArray_ReverseCharArray_Array()
-  //   {
-  //     Phrase testPhrase = new Phrase("hello");
-  //     char [] testArray = testPhrase.StringToChar();
-  //     char [] result = testPhrase.ReverseArray(testArray);
-  //     char [] expected = {'o', 'l', 'l', 'e', 'h'};
 
-  //     Assert.AreEqual(result, expected);
-  //   }
+// bool areEqual = CompareLists(result, expected);
+// Assert.IsTrue(areEqual)

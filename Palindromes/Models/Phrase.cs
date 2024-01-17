@@ -27,7 +27,18 @@ namespace Palindromes.Models
     }
     return reversedPhrase;
   }
-  
+  public bool PalindromeChecker(List<char> input, List<char> reverse)
+  {
+    if (input == reverse)
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+    
+  }
 }
 }
 
