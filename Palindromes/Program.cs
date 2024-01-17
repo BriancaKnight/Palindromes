@@ -1,6 +1,7 @@
 using System;
 using Palindromes.Models;
 using System.Collections.Generic;
+using Palindromes.UserInterfaceModels;
 
 namespace Palindromes
 {
@@ -8,7 +9,8 @@ class Program
 {
   static void Main()
   {
-    Console.WriteLine("Enter a word!");
+    Console.WriteLine(Palindromes.UserInterfaceModels.WelcomeBanner.Welcome);
+    Console.WriteLine("Enter a word and I'll tell you if it's a palindrome!");
     string response = Console.ReadLine();
     string userInput = response;
     Phrase testPhrase = new Phrase(userInput);
@@ -17,6 +19,17 @@ class Program
     List<char> revResponse = testPhrase.ReverseList(listResponse);
     bool checker = testPhrase.PalindromeChecker(listResponse, revResponse);
     Console.WriteLine($"Is your word a palindrome? {checker}");
+    Console.WriteLine("Do you want to play again? Enter 'y' or 'n'...");
+    string again = Console.ReadLine();
+    if (again == "y" || again == "Y")
+    {
+      Main();
+    }
+    else 
+    {
+      Console.WriteLine(Palindromes.UserInterfaceModels.GoodbyeBanner.Goodbye);
+    }
+
   }
 }
 }
