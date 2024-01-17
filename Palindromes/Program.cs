@@ -16,7 +16,7 @@ class Program
     List<char> listResponse = testPhrase.StringToCharList();
     List<char> revResponse = testPhrase.ReverseList(listResponse);
     bool checker = testPhrase.PalindromeChecker(listResponse, revResponse);
-    Console.WriteLine(checker);
+    Console.WriteLine($"Is your word a palindrome? {checker}");
   }
 }
 }
