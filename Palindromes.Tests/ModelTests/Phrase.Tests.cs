@@ -22,6 +22,16 @@ namespace Palindromes.Tests
       string result = newPhrase.Input;
       Assert.AreEqual(userInput, result);
     }
+    [TestMethod]
+    public void SetUserInput_SetsValueOfUserInput_Void()
+    {
+      Phrase newPhrase = new Phrase("hello");
+      string newInput = "goodbye";
+      newPhrase.Input = newInput;
+      Assert.AreEqual(newInput, newPhrase.Input);
+    }
+
+    
 }
   
 }
