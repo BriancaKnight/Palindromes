@@ -41,18 +41,18 @@ namespace Palindromes.Tests
       List<char> expected = new List<char> { 'h', 'e', 'l', 'l', 'o' };
       CollectionAssert.AreEqual(testList, expected);
     }
-}
-}
 
-  // [TestMethod]
-  //   public void StringToChar_CreateCharArray_Array()
-  //   {
-  //     string testString = "hello";
-  //     Phrase phrase = new Phrase(testString);
-  //     char[] newArray = phrase.StringToChar();
-  //     char[] expected =  { 'h', 'e', 'l', 'l', 'o'};
-  //     CollectionAssert.AreEqual(newArray, expected);
-  //   }
+    [TestMethod]
+    public void ReverseList_ReversCharsInCharList_List()
+    {
+      Phrase testPhrase = new Phrase("hello");
+      List<char> charList = testPhrase.StringToCharList();
+      List<char> result = testPhrase.ReverseList(charList);
+      List<char> expected = new List<char> {'o', 'l', 'l', 'e', 'h'};
+      CollectionAssert.AreEqual(result, expected);
+    }
+}
+}
 
   //   [TestMethod]
   //   public void ReverseArray_ReverseCharArray_Array()
@@ -61,5 +61,6 @@ namespace Palindromes.Tests
   //     char [] testArray = testPhrase.StringToChar();
   //     char [] result = testPhrase.ReverseArray(testArray);
   //     char [] expected = {'o', 'l', 'l', 'e', 'h'};
+
   //     Assert.AreEqual(result, expected);
   //   }

@@ -17,21 +17,18 @@ namespace Palindromes.Models
   {
     return Input.ToList(); //should split str to char list.
   }
+
+  public List<char> ReverseList(List<char> userInput)
+  {
+    List<char> reversedPhrase = new List<char> { };
+    for (int i = userInput.Count -1; i >= 0; i--)
+    {
+      reversedPhrase.Add(userInput[i]);
+    }
+    return reversedPhrase;
+  }
   
 }
 }
 
-// public char[] StringToChar() 
-//   {
-//     return Input.ToCharArray();
-//   }
-
-//   public char[] ReverseArray(char[] userInput) // ReverseArray(StringToChar(userInput)) (callf() in UI)
-//   {
-//     char[] reversedPhrase = new char[] { };
-//     for (int i = userInput.Length -1; i >= 0; i--)
-//     {
-//       reversedPhrase.Add(i);
-//     }
-//     return reversedPhrase;
-//   }
+// ReverseArray(StringToChar(userInput)) (callf() in UI)
