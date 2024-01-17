@@ -8,4 +8,5 @@ namespace Palindromes.Tests
   {
     // Test methods go here
   }
+  [TestMethod]
 }
